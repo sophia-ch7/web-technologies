@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, user-scalable=no, initial-scale=1.0, maximumscale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task3</title>
+</head>
+<body>
+  <header>
+   <h1>Завдання 3</h1>
+   <p><a href="../index.html">Повернутись на головну</a></p>
+  </header>
+  <main align="center">
+   <h2>Анкета</br>стажування</h2>
+
+  <form action="questionnaire.html" method="post" enctype="multipart/form-data">
+    
+  
+    <fieldset>
+      <legend>Особисті дані</legend>
+
+      <label>Ім’я:
+        <input type="text" name="name" placeholder="Введіть ваше ім’я" required tabindex="1">
+      </label><br><br>
+
+      <label>Електронна пошта:
+        <input type="email" name="email" placeholder="example@gmail.com" 
+               autocomplete="off" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required tabindex="2">
+      </label><br><br>
+
+      <label>Пароль:
+        <input type="password" name="password" placeholder="6 символів, велика/мала літера, цифра"
+               pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6}" required tabindex="3">
+      </label><br><br>
+
+      <label>Телефон:
+        <input type="tel" name="phone" placeholder="+380XXXXXXXXX" 
+               pattern="^\+380\d{9}$" required tabindex="4">
+      </label><br><br>
+
+      <label>Дата народження:
+        <input type="date" name="birthdate" required tabindex="5">
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Рівень знань в IT</legend>
+
+      <p>Який у вас рівень володіння комп’ютером?</p>
+      <label><input type="radio" name="computer" value="beginner" tabindex="6"> Початковий</label>
+      <label><input type="radio" name="computer" value="intermediate" tabindex="7"> Середній</label>
+      <label><input type="radio" name="computer" value="advanced" tabindex="8"> Просунутий</label>
+
+      <p>Який напрям вас цікавить найбільше?</p>
+      <label><input type="radio" name="direction" value="programming" checked tabindex="9"> Програмування</label>
+      <label><input type="radio" name="direction" value="design" tabindex="10"> Дизайн</label>
+      <label><input type="radio" name="direction" value="testing" tabindex="11"> Тестування</label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Технології, які ви знаєте</legend>
+
+      <label><input type="checkbox" name="tech" value="html" tabindex="12"> HTML</label>
+      <label><input type="checkbox" name="tech" value="css" tabindex="13"> CSS</label>
+      <label><input type="checkbox" name="tech" value="js" tabindex="14"> JavaScript</label>
+      <label><input type="checkbox" name="tech" value="python" tabindex="15"> Python</label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Освіта</legend>
+
+      <label>Ваш рівень освіти:
+        <select name="education" tabindex="16">
+          <option value="school">Школа</option>
+          <option value="college">Коледж</option>
+          <option value="university" selected>Університет</option>
+          <option value="master">Магістратура</option>
+          <option value="other">Інше</option>
+        </select>
+      </label>
+      <br><br>
+
+      <label>Які мови програмування ви хочете вивчити:
+        <select name="languages" multiple size="4" tabindex="17">
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="csharp">C#</option>
+          <option value="cpp">C++</option>
+          <option value="js">JavaScript</option>
+          <option value="php">PHP</option>
+        </select>
+      </label>
+      <br><br>
+
+      <label>Улюблена сфера IT:
+        <select name="itarea" tabindex="18">
+          <optgroup label="Розробка">
+            <option>Frontend</option>
+            <option>Backend</option>
+            <option>Fullstack</option>
+          </optgroup>
+          <optgroup label="Адміністрування">
+            <option>DevOps</option>
+            <option>SysAdmin</option>
+            <option>Security</option>
+          </optgroup>
+          <optgroup label="Аналітика">
+            <option>Data Science</option>
+            <option>Big Data</option>
+            <option>ML/AI</option>
+          </optgroup>
+          <optgroup label="Інше">
+            <option>UX/UI</option>
+            <option>GameDev</option>
+            <option>Testing</option>
+          </optgroup>
+        </select>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Додаткова інформація</legend>
+
+      <label>Де ви навчаєтесь?
+        <input list="universities" name="university" placeholder="Оберіть або введіть..." tabindex="19">
+        <datalist id="universities">
+          <option value="ЧНУ імені Юрія Федьковича">
+          <option value="КПІ">
+          <option value="ЛНУ">
+          <option value="ХНУРЕ">
+        </datalist>
+      </label>
+      <br><br>
+
+      <label>Розкажіть коротко про свій досвід у ІТ:
+        <textarea name="experience" rows="4" cols="40" placeholder="Введіть текст..." tabindex="20"></textarea>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Завантаження файлів</legend>
+
+      <label>Завантажте аудіофайли:
+        <input type="file" name="audiofiles" accept="audio/*" multiple tabindex="21">
+      </label>
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Надіслати" tabindex="22">
+    <input type="reset" value="Очистити" tabindex="23">
+
+  </form>
+  </main>
+  <footer></footer>
+</body>
+</html>
