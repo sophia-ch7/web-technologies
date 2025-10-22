@@ -1,0 +1,34 @@
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+p {
+    color: green;
+    text-align: center;
+}
+div {
+    text-align: justify;
+}
+.colored {
+    color:red;
+}
+.one-line {
+    white-space: nowrap;
+}
+#para2 {
+    font-style: italic;
+    font-weight: bold;
+}
+.background-shadow {
+    text-shadow: 5px -5px 3px blueviolet;
+}
+.crossed-out {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+.large-indents  {
+    word-spacing: 50px;
+    letter-spacing: 30px;
+}

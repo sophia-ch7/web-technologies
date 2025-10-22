@@ -1,0 +1,22 @@
+*{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.color {
+    color: red;
+}
+h2 {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.underscore {
+    text-decoration: underline;
+}і
+.crossed-out {
+    text-decoration: line-through;
+}
+.highlighted {
+    background-color: yellow;
+}
