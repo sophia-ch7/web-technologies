@@ -1,0 +1,40 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-header: #e74c3c;
+    --color-nav: #f39c12;
+    --color-main: #3498db;
+    --color-sidebar: #2ecc71;
+    --color-ads: #9b59b6;
+    --color-footer: #34495e;
+    --gap-base: 10px;
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: var(--gap-base);
+    display: grid; 
+    gap: var(--gap-base);
+}
+
+.header, .navigation, .main, .sidebar, .ads, .footer {
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    min-height: 50px; 
+}
+
+.header { background-color: var(--color-header); }
+.navigation { background-color: var(--color-nav); }
+.main { background-color: var(--color-main); min-height: 300px; }
+.sidebar { background-color: var(--color-sidebar); }
+.ads { background-color: var(--color-ads); }
+.footer { background-color: var(--color-footer); }

@@ -1,0 +1,142 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    --grid-columns: 3; 
+    --grid-gap: 20px;
+    --content-padding: 20px;
+    --image-thumb-height: 180px;
+}
+
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--grid-gap);
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr); 
+    gap: var(--grid-gap);
+}
+
+.item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.picture.thumb {
+    height: var(--image-thumb-height);
+    object-fit: cover;
+    width: 100%;
+}
+
+.item-grid {
+    padding: var(--content-padding);
+    display: grid;
+    grid-template-rows: auto auto auto; 
+    gap: 10px; 
+}
+
+.title {
+    grid-row: 1; 
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.desc {
+    grid-row: 2; 
+    color: #555;
+    line-height: 1.5;
+}
+
+.button {
+    grid-row: 3; 
+    text-align: center;
+    padding: 10px 15px;
+    background-color: #6c757d; 
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #495057;
+}
+
+.item-large {
+    grid-column: span 2; 
+    grid-row: 1;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.item-large .picture.image {
+    height: 380px; 
+    object-fit: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.item-large .content.item-grid {
+    padding: var(--content-padding);
+    border: none; 
+    box-shadow: none;
+    background: none;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --grid-columns: 2; 
+        --grid-gap: 15px;
+    }
+    
+    .item-large {
+        grid-column: span 2; 
+    }
+    .item-large .picture.image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --grid-columns: 1; 
+        --grid-gap: 10px;
+        --content-padding: 15px;
+        --image-thumb-height: 150px;
+    }
+    
+    .page-wrapper {
+        padding: var(--grid-gap);
+    }
+
+    .item-large {
+        grid-column: span 1; 
+    }
+    
+    .item-large .picture.image {
+        height: 200px;
+    }
+}
