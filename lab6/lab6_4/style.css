@@ -1,0 +1,187 @@
+/* ===============================================
+  1. BASE (Базові стилі)
+===============================================
+*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* (Прибираємо маркери списку) */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    display: block;
+    height: auto; 
+    max-width: 100%; /* Додано для адаптивності */
+}
+
+/* ===============================================
+  2. LAYOUT (Стилі Макету)
+===============================================
+*/
+
+.wrapper {
+    width: 1140px; /* Ширина "обгортки" */
+    padding: 20px; /* Внутрішні поля */
+    margin-left: auto;
+    margin-right: auto; /* Вирівнювання по центру */
+    background-color: #ffffff;
+}
+
+.header {
+    /* Цей блок містить плаваючі елементи */
+}
+
+.main {
+    /* Очищуємо float від хедера */
+    clear: both; 
+    padding-top: 30px; 
+    text-align: center; /* (Для центрування inline-block елементів) */
+}
+
+/* Допоміжний клас для очищення float (clearfix)
+*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* ===============================================
+  3. MODULE (Стилі Модулів)
+===============================================
+*/
+
+/* --- Модуль .logo --- */
+.logo {
+    float: left; 
+    display: block; 
+}
+
+/* --- Модуль .nav (Горизонтальне меню) --- */
+.nav {
+    float: right; 
+}
+
+.nav-item {
+    float: left; 
+    margin-left: 8px;
+}
+
+.nav-item:first-child {
+    margin-left: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 15px;
+    background-color: #fff64a; 
+}
+
+.nav-link:hover {
+    background-color: #dae589;
+}
+
+
+/* =============================================== */
+/* --- Модуль .shadow-item (Завдання 4) --- */
+/* =============================================== */
+
+.shadow-item {
+    text-align: start; /* (Текст всередині блоку - зліва) */
+    margin: 20px; 
+    border: 1px solid green; /* (Базова зелена рамка) */
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    display: inline-block; /* (Для центрування) */
+    vertical-align: top; 
+    padding: 15px; /* (Відступи всередині) */
+    position: relative; /* (Залишаємо для майбутніх ефектів, якщо треба) */
+}
+
+/* Стилі для контенту всередині .shadow-item */
+.shadow-item img {
+    width: 100%;
+    margin: 5px 0; 
+}
+
+.shadow-item p,
+.shadow-item strong {
+    margin: 0;
+}
+
+/* --- Модифікатори .shadow-item (Завдання 4) --- */
+
+.top-left-shadow {
+    box-shadow: -10px -10px 5px green;
+}
+
+.full-shadow {
+    box-shadow: 0 0 10px 10px green;
+}
+
+.right-bottom-shadow {
+    box-shadow: 0.4em 0.4em 5px rgba(0, 128, 0, 0.5);
+}
+
+.faint-full-shadow {
+    box-shadow: 0 0 50px 2px green;
+}
+
+.multicoloured-shadow {
+    box-shadow: inset 5px 0 red, inset 0 5px green, inset -5px 0 blue, inset 0 -5px darkorange;
+}
+
+/* (ОНОВЛЕНО) Стиль для "Shadow 6" згідно з вашим зображенням */
+.duocolored-shadow {
+    /* .shadow-item вже дає 'border: 1px solid green;' */
+    
+    /* Робимо верхню рамку помаранчевою і трохи товщою */
+    border-top: 3px solid darkorange; 
+    
+    /* Робимо нижню рамку зеленою і трохи товщою */
+    border-bottom: 3px solid green;
+    
+    /* Бокові рамки залишаються 1px green від .shadow-item */
+}
+
+/* (ОНОВЛЕНО) Ці правила більше не потрібні, видаляємо їх */
+.duocolored-shadow::before,
+.duocolored-shadow::after {
+    display: none; 
+}
+
+
+/* ===============================================
+  4. STATE (Стилі Станів / Утиліти)
+===============================================
+*/
+
+/* (Стилі для Завдання 1) */
+.is-float-left {
+    float: left; 
+    width: 200px; 
+    margin: 10px 20px 10px 0;
+}
+
+.is-float-right {
+    float: right; 
+    width: 200px; 
+    margin: 10px 0 10px 20px;
+}

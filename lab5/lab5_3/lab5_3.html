@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анкета стажування</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body class="page">
+  <header class="site-header">
+    <h2 class="site-header__title">Анкета стажування</h2>
+  </header>
+
+  <main class="site-main">
+    <form class="form" action="questionnaire.html" method="post" enctype="multipart/form-data">
+      
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Особисті дані</legend>
+
+        <label class="form__label">Ім’я:
+          <input class="form__input" type="text" name="name" placeholder="Введіть ваше ім’я" required>
+        </label>
+
+        <label class="form__label">Електронна пошта:
+          <input class="form__input" type="email" name="email" placeholder="example@gmail.com" required>
+        </label>
+
+        <label class="form__label">Пароль:
+          <input class="form__input" type="password" name="password" placeholder="6 символів, велика/мала літера, цифра" required>
+        </label>
+
+        <label class="form__label">Телефон:
+          <input class="form__input" type="tel" name="phone" placeholder="+380XXXXXXXXX" required>
+        </label>
+
+        <label class="form__label">Дата народження:
+          <input class="form__input" type="date" name="birthdate" required>
+        </label>
+      </fieldset>
+
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Рівень знань в IT</legend>
+
+        <p class="form__text">Який у вас рівень володіння комп’ютером?</p>
+        <label><input type="radio" name="computer"> Початковий</label>
+        <label><input type="radio" name="computer"> Середній</label>
+        <label><input type="radio" name="computer"> Просунутий</label>
+
+        <p class="form__text">Який напрям вас цікавить найбільше?</p>
+        <label><input type="radio" name="direction"> Програмування</label>
+        <label><input type="radio" name="direction"> Дизайн</label>
+        <label><input type="radio" name="direction"> Тестування</label>
+      </fieldset>
+
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Технології, які ви знаєте</legend>
+        <label><input type="checkbox" name="tech" value="html"> HTML</label>
+        <label><input type="checkbox" name="tech" value="css"> CSS</label>
+        <label><input type="checkbox" name="tech" value="js"> JavaScript</label>
+        <label><input type="checkbox" name="tech" value="python"> Python</label>
+      </fieldset>
+
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Освіта</legend>
+
+        <label class="form__label">Ваш рівень освіти:
+          <select class="form__select" name="education">
+            <option>Школа</option>
+            <option>Коледж</option>
+            <option selected>Університет</option>
+            <option>Магістратура</option>
+          </select>
+        </label>
+
+        <label class="form__label">Які мови програмування ви хочете вивчити:
+          <select class="form__select" name="languages" multiple size="4">
+            <option>Python</option>
+            <option>Java</option>
+            <option>C#</option>
+            <option>C++</option>
+            <option>JavaScript</option>
+            <option>PHP</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Додаткова інформація</legend>
+        <label class="form__label">Де ви навчаєтесь?
+          <input list="universities" name="university" placeholder="Оберіть або введіть...">
+          <datalist id="universities">
+            <option value="ЧНУ ім. Ю. Федьковича">
+            <option value="КПІ">
+            <option value="ЛНУ">
+            <option value="ХНУРЕ">
+          </datalist>
+        </label>
+
+        <label class="form__label">Розкажіть коротко про свій досвід у ІТ:
+          <textarea class="form__textarea" name="experience" rows="4" placeholder="Введіть текст..."></textarea>
+        </label>
+      </fieldset>
+
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Завантаження файлів</legend>
+        <label class="form__label">Завантажте аудіофайли:
+          <input type="file" name="audiofiles" accept="audio/*" multiple>
+        </label>
+      </fieldset>
+
+      <div class="form__buttons">
+        <input class="btn btn--primary" type="submit" value="Надіслати">
+        <input class="btn btn--secondary" type="reset" value="Очистити">
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p class="copyright">© ЧНУ імені Юрія Федьковича, 2025</p>
+  </footer>
+</body>
+</html>

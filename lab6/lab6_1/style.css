@@ -1,0 +1,137 @@
+/* ===============================================
+  1. BASE (Базові стилі)
+===============================================
+*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* (Прибираємо маркери списку) */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    /* (Зображення тепер будуть блоковими елементами 
+       для кращого керування відступами) */
+    display: block;
+    height: auto; /* (Зберігаємо пропорції) */
+}
+
+/* ===============================================
+  2. LAYOUT (Стилі Макету)
+===============================================
+*/
+
+.wrapper {
+    width: 1140px; /* Ширина "обгортки" */
+    padding: 20px; /* Внутрішні поля */
+    margin-left: auto;
+    margin-right: auto; /* Вирівнювання по центру */
+    background-color: #ffffff;
+}
+
+.header {
+    /* Цей блок містить плаваючі елементи */
+}
+
+.main {
+    /* Очищуємо float від хедера */
+    clear: both; /* */
+    padding-top: 30px; 
+}
+
+/* Допоміжний клас для очищення float (clearfix)
+*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ===============================================
+  3. MODULE (Стилі Модулів)
+===============================================
+*/
+
+/* --- Модуль .logo --- */
+.logo {
+    float: left; /* (Розміщення згідно float) */
+    display: block; 
+}
+
+/* --- Модуль .nav (Горизонтальне меню) --- */
+.nav {
+    float: right; /* (Розміщення згідно float) */
+}
+
+.nav-item {
+    float: left; /* (Робить список горизонтальним) */
+    margin-left: 8px;
+}
+
+.nav-item:first-child {
+    margin-left: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 15px;
+    background-color: #fff64a; 
+}
+
+.nav-link:hover {
+    background-color: #dae589;
+}
+
+/* --- Модуль .article (Завдання 1) --- */
+.article {
+    /* (оптимальне число колонок - 3) */
+    column-count: 3;
+    
+    /* (відстань між колонками - 35px) */
+    column-gap: 35px;
+    
+    /* (розділова лінія: 5px, пунктирна, червона) */
+    column-rule: 5px dotted red;
+}
+
+/* (Стилізуємо текст всередині .article) */
+.article p {
+    text-align: justify;
+    margin: 0;
+}
+
+
+/* ===============================================
+  4. STATE (Стилі Станів / Утиліти)
+===============================================
+*/
+
+.is-float-left {
+    float: left; /* (Розміщення через float) */
+    width: 200px; /* (ширина рисунку) */
+    
+    /* (Відступи, як у прикладі: 10px зверху/знизу, 20px справа) */
+    margin: 10px 20px 10px 0;
+}
+
+.is-float-right {
+    float: right; /* (Розміщення через float) */
+    width: 200px; /* (ширина рисунку) */
+
+    /* (Відступи, як у прикладі: 10px зверху/знизу, 20px зліва) */
+    margin: 10px 0 10px 20px;
+}

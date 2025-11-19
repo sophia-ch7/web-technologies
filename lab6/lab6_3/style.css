@@ -1,0 +1,145 @@
+/* ===============================================
+  1. BASE (Базові стилі)
+===============================================
+*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* (Прибираємо маркери списку) */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    display: block;
+    height: auto; 
+}
+
+/* ===============================================
+  2. LAYOUT (Стилі Макету)
+===============================================
+*/
+
+.wrapper {
+    width: 1140px; /* Ширина "обгортки" */
+    padding: 20px; /* Внутрішні поля */
+    margin-left: auto;
+    margin-right: auto; /* Вирівнювання по центру */
+    background-color: #ffffff;
+}
+
+.header {
+    /* Цей блок містить плаваючі елементи */
+}
+
+.main {
+    /* Очищуємо float від хедера */
+    clear: both; 
+    padding-top: 30px; 
+}
+
+/* Допоміжний клас для очищення float (clearfix)
+*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* ===============================================
+  3. MODULE (Стилі Модулів)
+===============================================
+*/
+
+/* --- Модуль .logo (Шапка) --- */
+.logo {
+    float: left; 
+    display: block; 
+}
+
+/* --- Модуль .nav (Шапка) --- */
+.nav {
+    float: right; 
+}
+
+.nav-item {
+    float: left; 
+    margin-left: 8px;
+}
+
+.nav-item:first-child {
+    margin-left: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 15px;
+    background-color: #fff64a; 
+}
+
+.nav-link:hover {
+    background-color: #dae589;
+}
+
+
+/* --- Стилі для Завдання 3 --- */
+
+/* (Стилізуємо текст локально, а не глобально) */
+.main p {
+    text-align: start;
+}
+.main strong {
+    font-size: 18px;
+}
+.coloured-monolithic,
+.coloured-parent {
+    color: #ffffff; /* (Колір тексту) */
+}
+
+.coloured-monolithic {
+    margin-top: 20px;
+    border-radius: 70px;
+    padding: 15px 30px;
+    background: #5e1212;
+    overflow: hidden;/* (ВИМОГА ТЕОРІЇ) [cite: 505-506] */
+}
+
+.coloured-parent {
+    margin-top: 20px;
+    background: #975959;
+    border-radius: 70px;
+    padding: 15px 30px;
+    overflow: hidden;/* (ВИМОГА ТЕОРІЇ) [cite: 505-506] */
+}
+
+.coloured-derived {
+    width: 500px;
+    background: #ac3131;
+    border-radius: 70px;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    overflow: hidden; /* (ВИМОГА ТЕОРІЇ) [cite: 505-506] */
+}
+
+/* (Класи для float, як у подруги) */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}

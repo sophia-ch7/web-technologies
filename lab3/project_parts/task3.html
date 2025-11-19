@@ -9,21 +9,16 @@
 </head>
 <body>
   <header>
-   <h1>Завдання 3</h1>
-   <p><a href="../index.html">Повернутись на головну</a></p>
+    <h2>Анкета стажування</h2>
   </header>
-  <main align="center">
-   <h2>Анкета</br>стажування</h2>
-
+  <main>
   <form action="questionnaire.html" method="post" enctype="multipart/form-data">
-    
-  
     <fieldset>
       <legend>Особисті дані</legend>
 
       <label>Ім’я:
         <input type="text" name="name" placeholder="Введіть ваше ім’я" required tabindex="1">
-      </label><br><br>
+      </label>
 
       <label>Електронна пошта:
         <input type="email" name="email" placeholder="example@gmail.com" 
@@ -44,9 +39,6 @@
         <input type="date" name="birthdate" required tabindex="5">
       </label>
     </fieldset>
-
-    <br>
-
     <fieldset>
       <legend>Рівень знань в IT</legend>
 
@@ -60,9 +52,6 @@
       <label><input type="radio" name="direction" value="design" tabindex="10"> Дизайн</label>
       <label><input type="radio" name="direction" value="testing" tabindex="11"> Тестування</label>
     </fieldset>
-
-    <br>
-
     <fieldset>
       <legend>Технології, які ви знаєте</legend>
 
@@ -71,9 +60,6 @@
       <label><input type="checkbox" name="tech" value="js" tabindex="14"> JavaScript</label>
       <label><input type="checkbox" name="tech" value="python" tabindex="15"> Python</label>
     </fieldset>
-
-    <br>
-
     <fieldset>
       <legend>Освіта</legend>
 
@@ -86,8 +72,6 @@
           <option value="other">Інше</option>
         </select>
       </label>
-      <br><br>
-
       <label>Які мови програмування ви хочете вивчити:
         <select name="languages" multiple size="4" tabindex="17">
           <option value="python">Python</option>
@@ -98,8 +82,6 @@
           <option value="php">PHP</option>
         </select>
       </label>
-      <br><br>
-
       <label>Улюблена сфера IT:
         <select name="itarea" tabindex="18">
           <optgroup label="Розробка">
@@ -125,9 +107,6 @@
         </select>
       </label>
     </fieldset>
-
-    <br>
-
     <fieldset>
       <legend>Додаткова інформація</legend>
 
@@ -140,15 +119,10 @@
           <option value="ХНУРЕ">
         </datalist>
       </label>
-      <br><br>
-
       <label>Розкажіть коротко про свій досвід у ІТ:
         <textarea name="experience" rows="4" cols="40" placeholder="Введіть текст..." tabindex="20"></textarea>
       </label>
     </fieldset>
-
-    <br>
-
     <fieldset>
       <legend>Завантаження файлів</legend>
 
@@ -156,10 +130,7 @@
         <input type="file" name="audiofiles" accept="audio/*" multiple tabindex="21">
       </label>
     </fieldset>
-
-    <br>
-
-    <input type="submit" value="Надіслати" tabindex="22">
+    <input type="submit" value="Надіслати" tabindex="22" disabled>
     <input type="reset" value="Очистити" tabindex="23">
 
   </form>
