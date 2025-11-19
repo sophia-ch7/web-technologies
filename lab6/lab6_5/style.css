@@ -1,7 +1,3 @@
-/* ===============================================
-  1. BASE (Базові стилі)
-===============================================
-*/
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,7 +11,7 @@ body {
 ul {
     margin: 0;
     padding: 0;
-    list-style: none; /* (Прибираємо маркери списку) */
+    list-style: none; 
 }
 
 a {
@@ -26,54 +22,34 @@ a {
 img {
     display: block;
     height: auto; 
-    max-width: 100%; /* Додано для адаптивності */
+    max-width: 100%; 
 }
 
-/* ===============================================
-  2. LAYOUT (Стилі Макету)
-===============================================
-*/
-
 .wrapper {
-    width: 1140px; /* Ширина "обгортки" */
-    padding: 20px; /* Внутрішні поля */
+    width: 1140px;
+    padding: 20px; 
     margin-left: auto;
-    margin-right: auto; /* Вирівнювання по центру */
+    margin-right: auto; 
     background-color: #ffffff;
 }
 
-.header {
-    /* Цей блок містить плаваючі елементи */
-}
-
 .main {
-    /* Очищуємо float від хедера */
     clear: both; 
     padding-top: 30px; 
-    text-align: center; /* (Для центрування inline-block елементів) */
+    text-align: center;
 }
 
-/* Допоміжний клас для очищення float (clearfix)
-*/
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
 
-
-/* ===============================================
-  3. MODULE (Стилі Модулів)
-===============================================
-*/
-
-/* --- Модуль .logo --- */
 .logo {
     float: left; 
     display: block; 
 }
 
-/* --- Модуль .nav (Горизонтальне меню) --- */
 .nav {
     float: right; 
 }
@@ -97,13 +73,6 @@ img {
     background-color: #dae589;
 }
 
-
-/* --- Модуль .block (Завдання 2) --- */
-/* (Тут мають бути всі ваші стилі для .block, 
-  .simple-coloured, .round-borders, .stretch-diamonds і т.д.) */
-
-
-/* --- Модуль .shadow-item (Завдання 4) --- */
 .shadow-item {
     text-align: start; 
     margin: 20px; 
@@ -124,15 +93,8 @@ img {
 .shadow-item strong {
     margin: 0;
 }
-/* (Тут мають бути всі модифікатори: .top-left-shadow, .duocolored-shadow і т.д.) */
-
-
-/* =============================================== */
-/* --- НОВИЙ Модуль .gradient-item (Завдання 5) --- */
-/* =============================================== */
 
 .gradient-item {
-    /* (Використовуємо inline-block для центрування через .main) */
     display: inline-block;
     vertical-align: top;
     margin: 10px;
@@ -140,32 +102,26 @@ img {
     box-sizing: border-box;
     width: 300px;
     height: 400px;
-    /* (Вирівнюємо текст зліва, як на зразку) */
     text-align: start; 
 }
 
-/* Стилі для зображення всередині .gradient-item */
 .gradient-item img {
     width: 200px;
-    height: 200px; /* (Додано для ідеального кола) */
+    height: 200px;
     border-radius: 50%;
-    /* (Центрування зображення) */
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px; /* (Відступ знизу) */
+    margin-bottom: 10px; 
 }
 
 .gradient-item strong {
-    /* (Відступ для заголовка) */
-    display: block; /* (Щоб margin спрацював) */
+    display: block; 
     margin-bottom: 5px;
 }
 
-/* --- Модифікатори .gradient-item (Завдання 5) --- */
-
 .linear-gradient {
     background: linear-gradient(45deg, rgb(77, 231, 141) 2%, rgba(255, 255, 61, 1) 23%, rgba(48, 52, 255, 1) 50%, rgba(145, 107, 210, 1) 68%, rgba(237, 165, 83, 1) 100%);
-    color: white; /* (Додано для читабельності, як на зразку) */
+    color: white; 
 }
 
 .squares-gradient {
@@ -194,16 +150,9 @@ img {
         linear-gradient(328deg, rgba(255, 0, 0, 0.5) 5%, rgba(255, 165, 0, 0.5) 10%, rgba(255, 255, 0, 0.5) 15%, rgba(0, 128, 0, 0.5) 20%, rgba(0, 0, 255, 0.5) 25%, rgba(75, 0, 130, 0.5) 30%, rgba(238, 130, 238, 0.5) 35%, rgba(255, 255, 255, 0) 45%),
         linear-gradient(45deg, rgba(255, 0, 0, 0.5) 15%, rgba(255, 165, 0, 0.5) 20%, rgba(255, 255, 0, 0.5) 30%, rgba(0, 128, 0, 0.5) 40%, rgba(0, 0, 255, 0.5) 55%, rgba(75, 0, 130, 0.5) 50%, rgba(238, 130, 238, 0.5) 70%, rgba(255, 255, 255, 0) 45%),
         linear-gradient(180deg, rgba(255, 0, 0, 0.5) 20%, rgba(255, 165, 0, 0.5) 30%, rgba(255, 255, 0, 0.5) 40%, rgba(0, 128, 0, 0.5) 50%, rgba(0, 0, 255, 0.5) 60%, rgba(75, 0, 130, 0.5) 70%, rgba(238, 130, 238, 0.5) 80%, rgba(255, 255, 255, 0) 45%);
-    color: white; /* (Додано для читабельності, як на зразку) */
+    color: white;
 }
 
-
-/* ===============================================
-  4. STATE (Стилі Станів / Утиліти)
-===============================================
-*/
-
-/* (Стилі для Завдання 1) */
 .is-float-left {
     float: left; 
     width: 200px; 
