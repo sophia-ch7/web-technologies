@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-4</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Облік продуктів інтернет-магазину</h1>
+      </header>
+
+      <section class="control-panel">
+        <h2>1. Додати новий продукт</h2>
+        <div class="form-group">
+          <input type="text" id="add-name" placeholder="Назва продукту" />
+          <input
+            type="number"
+            id="add-price"
+            placeholder="Ціна (грн)"
+            min="0"
+          />
+          <input
+            type="number"
+            id="add-qty"
+            placeholder="Кількість на складі"
+            min="0"
+          />
+          <button id="btn-add" class="primary-btn">Додати</button>
+        </div>
+      </section>
+
+      <section class="control-panel">
+        <h2>2. Керування продуктом (за ідентифікатором)</h2>
+
+        <div class="form-group">
+          <input
+            type="number"
+            id="manage-id"
+            placeholder="Введіть ID продукту"
+            min="1"
+          />
+          <button id="btn-order" class="action-btn">Замовити 1 шт.</button>
+          <button id="btn-delete" class="danger-btn">Видалити</button>
+        </div>
+
+        <div class="form-group update-group">
+          <input
+            type="number"
+            id="update-price"
+            placeholder="Нова ціна"
+            min="0"
+          />
+          <input
+            type="number"
+            id="update-qty"
+            placeholder="Нова кількість"
+            min="0"
+          />
+          <button id="btn-update" class="action-btn">Оновити дані</button>
+        </div>
+      </section>
+
+      <section class="control-panel">
+        <h2>3. Пошук продукту</h2>
+        <div class="form-group">
+          <input
+            type="text"
+            id="search-name"
+            placeholder="Введіть назву для пошуку"
+          />
+          <button id="btn-search" class="primary-btn">Знайти</button>
+        </div>
+      </section>
+
+      <section class="output-panel">
+        <h2>Системні повідомлення та результати</h2>
+        <div id="output-display" class="output-console">
+          Система ініціалізована. Очікування дій користувача...
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

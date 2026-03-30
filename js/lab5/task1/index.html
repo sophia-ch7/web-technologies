@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="controls">
+      <select id="bulb-type">
+        <option value="regular">Звичайна</option>
+        <option value="energy">Енергозберігаюча</option>
+        <option value="led">Світлодіодна</option>
+      </select>
+
+      <button id="toggle-btn">Увімкнути</button>
+      <button id="brightness-btn">Змінити яскравість</button>
+    </div>
+
+    <div id="bulb" class="bulb regular off"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

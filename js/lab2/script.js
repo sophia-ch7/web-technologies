@@ -11,7 +11,7 @@ function compareProducts(prod1, prod2) {
 }
 
 function isBetween(x, min, max) {
-  return x >= min && x <= max;
+  return x >= min && x <= max ? "Входить" : "Не входить";
 }
 
 let currentAppStatus = true;
@@ -47,20 +47,22 @@ function seasonTernary(m) {
           : "Помилка";
 }
 
-document.getElementById("t1").innerText = findMinMax([15, 3, 28, 2, 10]);
+document.getElementById("task1").innerText = findMinMax([15, 3, 28, 2, 10]);
 
 const item1 = { name: "Телефон", price: 500 };
 const item2 = { name: "Ноутбук", price: 1200 };
-document.getElementById("t2").innerText = compareProducts(item1, item2);
+document.getElementById("task2").innerText = compareProducts(item1, item2);
+document.getElementById("task3").innerText = isBetween(25, 10, 50);
+document.getElementById("task4").innerText = toggleStatus();
+document.getElementById("task5").innerText = getGrade(82);
+document.getElementById("task6").innerText = seasonIf(4);
+document.getElementById("task7").innerText = seasonTernary(10);
 
-document.getElementById("t3").innerText = isBetween(25, 10, 50)
-  ? "Входить"
-  : "Не входить";
-
-document.getElementById("t4").innerText = toggleStatus();
-
-document.getElementById("t5").innerText = getGrade(82);
-
-document.getElementById("t6").innerText = seasonIf(4);
-
-document.getElementById("t7").innerText = seasonTernary(10);
+n = 5;
+function newFunction(n) {
+  if (n >= 0 && n <= 2) return "WINTER";
+  if (n >= 3 && n <= 5) return "SPRING";
+  if (n >= 6 && n <= 8) return "SUMMER";
+  return "Autгmn";
+}
+console.log(newFunction(5));

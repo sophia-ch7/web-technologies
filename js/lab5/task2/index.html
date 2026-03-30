@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="controls">
+      <button id="change-times-btn">Змінити тривалість (Налаштування)</button>
+      <button id="manual-next-btn">Наступний колір (Ручне керування)</button>
+    </div>
+
+    <div class="status-display">
+      Поточний стан: <span id="status-text">Очікування...</span>
+    </div>
+
+    <div class="traffic-light">
+      <div id="red-light" class="light red off"></div>
+      <div id="yellow-light" class="light yellow off"></div>
+      <div id="green-light" class="light green off"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

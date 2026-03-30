@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Робота з датою та часом</h1>
+
+    <section class="card">
+      <h2>Поточний час</h2>
+      <div class="clock">
+        <span id="hours">00</span><span class="blink">:</span
+        ><span id="minutes">00</span><span class="blink">:</span
+        ><span id="seconds">00</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Таймер до події</h2>
+      <p>Оберіть дату і час у майбутньому:</p>
+      <input type="datetime-local" id="target-datetime" />
+      <button id="start-timer-btn">Запустити таймер</button>
+
+      <div id="timer-display" class="display-box">Очікування...</div>
+    </section>
+
+    <section class="card">
+      <h2>Скільки до Дня народження?</h2>
+      <p>Оберіть дату через календар:</p>
+      <input type="date" id="birthday-date" />
+
+      <div id="birthday-display" class="display-box">
+        Оберіть дату, щоб побачити розрахунок
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

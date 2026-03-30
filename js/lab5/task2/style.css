@@ -1,0 +1,108 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9ecef;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.status-display {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+#status-text {
+  text-transform: uppercase;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.traffic-light {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 4px solid #111;
+}
+
+.light {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #444;
+  border: 2px solid #111;
+  transition:
+    background-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.red.off {
+  background-color: #5a0000;
+}
+.yellow.off {
+  background-color: #5a5a00;
+}
+.green.off {
+  background-color: #005a00;
+}
+
+.red.on {
+  background-color: #ff3b30;
+  box-shadow:
+    0 0 40px #ff3b30,
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.yellow.on {
+  background-color: #ffcc00;
+  box-shadow:
+    0 0 40px #ffcc00,
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.green.on {
+  background-color: #34c759;
+  box-shadow:
+    0 0 40px #34c759,
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
