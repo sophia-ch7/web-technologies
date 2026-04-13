@@ -56,7 +56,7 @@ function formatRemainingTime(ms) {
   const hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
   const days = Math.floor(ms / (1000 * 60 * 60 * 24));
 
-  return "Залишилось: ${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.";
+  return `Залишилось: ${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.`;
 }
 
 function updateTimerDisplay(text) {
@@ -125,7 +125,7 @@ function formatBirthdayCountdown(ms) {
   const months = Math.floor(totalDays / 30);
   const days = totalDays % 30;
 
-  return "До Дня народження: ${months} міс. ${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.";
+  return `До Дня народження: ${months} міс. ${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.`;
 }
 
 function updateBirthdayDisplay(text) {

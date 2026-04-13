@@ -1,0 +1,281 @@
+:root {
+  --primary-color: #007bff;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --bg-color: #f8f9fa;
+  --text-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #343a40;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.total-price-container {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+  }
+  .controls-panel {
+    flex: 1;
+    min-width: 250px;
+  }
+  .product-section {
+    flex: 3;
+  }
+}
+
+.control-group {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #e9ecef;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #ced4da;
+}
+button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+.reset-btn {
+  background-color: #6c757d;
+  color: white;
+}
+.reset-btn:hover {
+  background-color: #5a6268;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  display: block;
+  margin: 1rem auto;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+.btn-warning {
+  background-color: var(--warning-color);
+  color: black;
+}
+
+.empty-state {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin: 2rem 0;
+}
+
+.product-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: fadeInCard 0.4s ease-out;
+}
+
+.product-card.removing {
+  animation: fadeOutCard 0.4s ease-out forwards;
+}
+
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 101;
+  right: 30px;
+  bottom: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  animation:
+    fadein 0.5s,
+    fadeout 0.5s 2.5s;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOutCard {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

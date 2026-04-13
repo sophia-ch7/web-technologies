@@ -6,9 +6,11 @@ const systemUser = { username: "Адміністратор", role: "admin" };
 activeUsersWeakSet.add(systemUser);
 let currentProductId = 1;
 const outputDisplay = document.getElementById("output-display");
+
 function printLog(message) {
   outputDisplay.textContent = message;
 }
+
 document.getElementById("btn-add").addEventListener("click", function () {
   const name = document.getElementById("add-name").value.trim();
   const price = Number(document.getElementById("add-price").value);
@@ -25,6 +27,10 @@ document.getElementById("btn-add").addEventListener("click", function () {
     price: price,
     quantity: qty,
   };
+
+  const obj = {...newProduct};
+
+  console.log(obj.price)
 
   productsMap.set(currentProductId, newProduct);
   productHistoryWeakMap.set(newProduct, ["Створено запис у каталозі."]);

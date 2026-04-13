@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна робота - Список товарів</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Каталог товарів</h1>
+      <div class="total-price-container">
+        Загальна вартість: <span id="total-price">0</span> ₴
+      </div>
+    </header>
+
+    <main class="main-content">
+      <aside class="controls-panel">
+        <section class="control-group">
+          <h3>Фільтрація (Категорії)</h3>
+          <div class="btn-group" id="filter-buttons">
+            <button data-category="Електроніка">Електроніка</button>
+            <button data-category="Одяг">Одяг</button>
+            <button data-category="Книги">Книги</button>
+            <button class="reset-btn" data-reset="filter">
+              Скинути фільтр
+            </button>
+          </div>
+        </section>
+
+        <section class="control-group">
+          <h3>Сортування</h3>
+          <div class="btn-group" id="sort-buttons">
+            <button data-sort="price">За ціною</button>
+            <button data-sort="createdAt">За датою створення</button>
+            <button data-sort="updatedAt">За датою оновлення</button>
+            <button class="reset-btn" data-reset="sort">
+              Скинути сортування
+            </button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="product-section">
+        <div id="empty-state" class="empty-state">
+          Наразі список товарів пустий. Додайте новий товар.
+        </div>
+
+        <ul id="product-list" class="product-list"></ul>
+
+        <button id="btn-add-new" class="btn-primary">Додати новий товар</button>
+      </section>
+    </main>
+
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2 id="modal-title">Додати товар</h2>
+        <form id="product-form">
+          <input type="hidden" id="product-id" />
+
+          <div class="form-group">
+            <label for="product-name">Назва товару:</label>
+            <input type="text" id="product-name" required minlength="2" />
+          </div>
+
+          <div class="form-group">
+            <label for="product-price">Ціна (₴):</label>
+            <input
+              type="number"
+              id="product-price"
+              required
+              min="0.01"
+              step="0.01"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="product-category">Категорія:</label>
+            <select id="product-category" required>
+              <option value="" disabled selected>Оберіть категорію</option>
+              <option value="Електроніка">Електроніка</option>
+              <option value="Одяг">Одяг</option>
+              <option value="Книги">Книги</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="product-image">URL Зображення:</label>
+            <input
+              type="url"
+              id="product-image"
+              required
+              placeholder="https://example.com/image.jpg"
+            />
+          </div>
+
+          <button type="submit" class="btn-success">Зберегти</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="snackbar">Повідомлення</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
