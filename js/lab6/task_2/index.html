@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мій список завдань</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Список завдань</h1>
+      </header>
+
+      <section class="add-task-section">
+        <form id="task-form" class="task-form">
+          <input
+            type="text"
+            id="new-task-input"
+            placeholder="Що потрібно зробити?"
+            required
+            minlength="3"
+            autocomplete="off"
+          />
+          <button type="submit" class="btn-primary">Додати</button>
+        </form>
+      </section>
+
+      <section class="controls-section">
+        <label for="sort-select">Сортувати за:</label>
+        <select id="sort-select" class="sort-select">
+          <option value="added_desc">Нові спочатку</option>
+          <option value="added_asc">Старі спочатку</option>
+          <option value="status">Спочатку невиконані</option>
+          <option value="updated_desc">Останні оновлені</option>
+        </select>
+      </section>
+
+      <section class="list-section">
+        <p id="empty-message" class="empty-message">
+          Ваш список завдань порожній. Додайте перше завдання!
+        </p>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

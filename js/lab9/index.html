@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authorization</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <div class="tabs">
+        <button class="tab-btn active" id="tab-signup">Sign Up</button>
+        <button class="tab-btn" id="tab-login">Login</button>
+      </div>
+
+      <form id="form-signup" class="form-content active" novalidate>
+        <h2 class="form-title">Create Account</h2>
+        <p class="form-subtitle">Fill in the details to get started</p>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="firstName">First Name</label>
+            <div class="field-icon-wrap">
+              <span class="field-icon">👤</span>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="First name"
+                autocomplete="given-name"
+              />
+              <span class="status-icon"></span>
+            </div>
+            <span class="error-message"></span>
+          </div>
+          <div class="input-group">
+            <label for="lastName">Last Name</label>
+            <div class="field-icon-wrap">
+              <span class="field-icon">👤</span>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Last name"
+                autocomplete="family-name"
+              />
+              <span class="status-icon"></span>
+            </div>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <div class="field-icon-wrap">
+            <span class="field-icon">✉️</span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="user@mail.com"
+              autocomplete="email"
+            />
+            <span class="status-icon"></span>
+          </div>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="field-icon-wrap password-container">
+              <span class="field-icon">🔒</span>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Min 6 characters"
+                autocomplete="new-password"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                data-target="password"
+                aria-label="Toggle password"
+              >
+                👁️
+              </button>
+            </div>
+            <span class="error-message"></span>
+          </div>
+          <div class="input-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="field-icon-wrap password-container">
+              <span class="field-icon">🔒</span>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Repeat password"
+                autocomplete="new-password"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                data-target="confirmPassword"
+                aria-label="Toggle password"
+              >
+                👁️
+              </button>
+            </div>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="phone">Phone</label>
+            <div class="field-icon-wrap">
+              <span class="field-icon">📱</span>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+380XXXXXXXXX"
+                autocomplete="tel"
+              />
+              <span class="status-icon"></span>
+            </div>
+            <span class="error-message"></span>
+          </div>
+          <div class="input-group">
+            <label for="dateBirth">Date of Birth</label>
+            <div class="field-icon-wrap">
+              <span class="field-icon">📅</span>
+              <input
+                type="date"
+                id="dateBirth"
+                name="dateBirth"
+                autocomplete="bday"
+              />
+              <span class="status-icon"></span>
+            </div>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="input-group" id="sex-group">
+          <label>Sex</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="sex" value="male" />
+              Male
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="sex" value="female" />
+              Female
+            </label>
+          </div>
+          <div class="radio-border-indicator"></div>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="country">Country</label>
+            <div class="field-icon-wrap">
+              <span class="field-icon">🌍</span>
+              <select id="country" name="country">
+                <option value="" disabled selected>Select country</option>
+                <option value="ukraine">Ukraine</option>
+                <option value="poland">Poland</option>
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+                <option value="usa">USA</option>
+                <option value="uk">United Kingdom</option>
+                <option value="italy">Italy</option>
+                <option value="spain">Spain</option>
+                <option value="czech">Czech Republic</option>
+                <option value="slovakia">Slovakia</option>
+                <option value="hungary">Hungary</option>
+                <option value="romania">Romania</option>
+                <option value="netherlands">Netherlands</option>
+                <option value="sweden">Sweden</option>
+                <option value="canada">Canada</option>
+              </select>
+              <span class="status-icon"></span>
+            </div>
+            <span class="error-message"></span>
+          </div>
+          <div class="input-group">
+            <label for="city">City</label>
+            <div class="field-icon-wrap">
+              <span class="field-icon">📍</span>
+              <select id="city" name="city" disabled>
+                <option value="" disabled selected>Select country first</option>
+              </select>
+              <span class="status-icon"></span>
+            </div>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Account</button>
+        <div id="signup-success" class="success-message"></div>
+      </form>
+
+      <form id="form-login" class="form-content" novalidate>
+        <h2 class="form-title">Welcome Back</h2>
+        <p class="form-subtitle">Login to your account</p>
+
+        <div class="input-group">
+          <label for="loginUsername">Username</label>
+          <div class="field-icon-wrap">
+            <span class="field-icon">👤</span>
+            <input
+              type="text"
+              id="loginUsername"
+              name="username"
+              placeholder="Enter username"
+              autocomplete="username"
+            />
+            <span class="status-icon"></span>
+          </div>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="loginPassword">Password</label>
+          <div class="field-icon-wrap password-container">
+            <span class="field-icon">🔒</span>
+            <input
+              type="password"
+              id="loginPassword"
+              name="password"
+              placeholder="Enter password"
+              autocomplete="current-password"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              data-target="loginPassword"
+              aria-label="Toggle password"
+            >
+              👁️
+            </button>
+          </div>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="input-group checkbox-group">
+          <label>
+            <input type="checkbox" id="rememberMe" name="rememberMe" />
+            Remember Me
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+        <div id="login-success" class="success-message"></div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
